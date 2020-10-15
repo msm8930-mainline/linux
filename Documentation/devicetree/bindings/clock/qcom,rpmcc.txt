@@ -11,6 +11,7 @@ Required properties :
                compatible "qcom,rpmcc" should be also included.
 
 			"qcom,rpmcc-msm8660", "qcom,rpmcc"
+			"qcom,rpmcc-msm8930", "qcom,rpmcc"
 			"qcom,rpmcc-apq8060", "qcom,rpmcc"
 			"qcom,rpmcc-msm8916", "qcom,rpmcc"
 			"qcom,rpmcc-msm8936", "qcom,rpmcc"
