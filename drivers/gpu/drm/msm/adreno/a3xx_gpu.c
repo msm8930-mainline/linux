@@ -505,16 +505,15 @@ struct msm_gpu *a3xx_gpu_init(struct drm_device *dev)
 	}
 
 	if (!gpu->aspace) {
-		/* TODO we think it is possible to configure the GPU to
+		/*
+		 * TODO we think it is possible to configure the GPU to
 		 * restrict access to VRAM carveout.  But the required
 		 * registers are unknown.  For now just bail out and
 		 * limp along with just modesetting.  If it turns out
 		 * to not be possible to restrict access, then we must
 		 * implement a cmdstream validator.
 		 */
-		DRM_DEV_ERROR(dev->dev, "No memory protection without IOMMU\n");
-		ret = -ENXIO;
-		goto fail;
+		DRM_DEV_INFO(dev->dev, "No memory protection without IOMMU\n");
 	}
 
 	/*
